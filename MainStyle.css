@@ -1,46 +1,52 @@
 .btn-default {
 
-width: 100px;
-margin-left: 100px;
-margin-bottom: 10px;
+
+width: auto;
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 15px;
+width: 360px;
+background-color: rgb(21, 145, 216);
+font-weight: bold;
+font-size: 15px;
 
 }
 
 .form-group {
   opacity: 1;
-
   padding-top: 10px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
+.form-control{
+
+  margin-bottom: 10px;
+}
+
+.welcome{
+  font-size: 30;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: grey;
+
+}
+
 .login-form{
- background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 1);
   width: 400;
-  margin:auto;
-  margin-top:0px;
-
+  margin: auto;
+  position: relative;
+  top: 40%;
+  transform: translateY(-40%);
+  border-radius: 15px;
 }
 
-.welcome-text{
-   background-color: rgba(220, 220, 220, 0.4);
-   width:400;
-  margin:auto;
-  margin-top: 200px;
-  height: 200px;
-}
+.seperate{
 
-h1{
-  background-color: rgba(220, 220, 220, 0.6);
-  padding: 10px;
-  font-size: 18;
-  font-family: arial;
-  font-weight: bold;
-}
+  border-bottom: 2px;
 
-p1{
-padding: 10px;
-font-size: 16;
-font-family: arial;
-
+  border-bottom-style: solid;
+  border-bottom-color: lightgrey;
 }
