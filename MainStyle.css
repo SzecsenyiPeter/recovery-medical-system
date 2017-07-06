@@ -38,8 +38,8 @@ font-size: 15px;
   width: 400;
   margin: auto;
   position: relative;
-  top: 40%;
-  transform: translateY(-40%);
+  margin-top: 20%;
+
   border-radius: 15px;
 }
 
@@ -49,4 +49,35 @@ font-size: 15px;
 
   border-bottom-style: solid;
   border-bottom-color: lightgrey;
+}
+
+.mainTab{
+
+  background-color: rgba(255, 255, 255, 1);
+  width: 80%;
+  margin: auto;
+  height: 80%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+label{
+
+  margin-right: 3px;
+}
+
+.customForm{
+  width: 400px;
+}
+
+.form-horizontal
+{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+a{
+  font-weight: bold;
+  color: grey;
+
 }

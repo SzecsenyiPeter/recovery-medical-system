@@ -104,10 +104,10 @@ namespace Korhaz
     public class Elozmeny
     {
 
-        public string betegnev;
-        public string orvosNev;
-        public string kezelesNev;
-        public string kezdes;
+        public string betegnev { set; get; }
+        public string orvosNev { set; get; }
+        public string kezelesNev { set; get; }
+        public string kezdes { set; get; }
 
         public Elozmeny(string _betegNev, string _kezdes, string _orvosNev, string _kezelesNev )
         {

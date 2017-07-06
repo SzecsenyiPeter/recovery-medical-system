@@ -1,27 +1,91 @@
 <html>
 
 <head>
-<title>Bootstrap Example</title>
+<title>Recovery</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="angular-cookies.js"></script>
+<script src="angular-route.js"></script>
+
 <script src="loginScript.js"></script>
 <link rel="stylesheet" href="MainStyle.css">
 <head/>
 <body background="LoginBackground.png" >
 
+<div ng-app="myApp">
+<ng-view></ng-view>
 
-  <div class="login-form" ng-app="myApp" ng-controller="myCtrl">
+<script type="text/ng-template" id="Login.html">
+  <div class="login-form"  ng-controller="LoginControl">
     <div class="seperate">
     <h1 class=" welcome"> Welcome to Recovery</h1>
   </div>
     <div class="form-group">
-
       <input class="form-control" type="text" ng-model="User" id="username" placeholder="Enter your username here!">
-
       <input type="password" class="form-control" ng-model="PassworldHash" id="pwd" placeholder="Enter your passworld here!">
     </div>
-    <button type="submit" class="btn btn-default" ng-click="myFunction()">Sign in</button>
+    <button type="submit" class="btn btn-default" ng-click="Login()">Sign in</button>
+    </div>
+  </script>
 
-  </div>
+
+
+
+  <script type="text/ng-template" id="History.html">
+    <div ng-controller="HistoryControl">
+      <div class="mainTab">
+      <ul class="nav nav-tabs">
+
+          <li class="active"><a data-toggle="tab" href='#!history'>History</a></li>
+          <li><a data-toggle="tab" href="#!addTreatment">Add Treatment</a></li>
+          <li><a data-toggle="tab" href="#!login">Logout</a></li>
+      </ul>
+
+      <div class="form-horizontal">
+
+        <label  for="doctor" class="control-label">Doctor:</label>
+        <input type="text" ng-model="Doctor" class="form-control customForm" id="doctor" placeholder="Name of the doctor whose histoy you want to find">
+
+      </div>
+
+      <div class="form-horizontal">
+        <label class="control-label" for="patient">Patient:</label>
+        <input type="text" ng-model="Patient" class="form-control customForm"  id="patient" placeholder="Name of the patient whose histoy you want to find">
+      </div>
+        <button type="submit" class="btn btn-default"  ng-click="SearchHistory()">Search</button>
+      <div >
+      <table class="table table-striped">
+        <thead>
+      <tr>
+        <th>#</th>
+        <th>Patient</th>
+        <th>Doctor</th>
+        <th>Treatment</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+      <tbody>
+    <tr ng-repeat="hist in HistoryData track by $index">
+      <td>{{$index}}</td>
+  		<td>{{hist.betegnev}}</td>
+  		<td>{{hist.orvosNev}}</td>
+  		<td>{{hist.kezelesNev}}</td>
+      <td>{{hist.kezdes}}</td>
+  	</tr>
+      </tbody>
+    </table>
+    </div>
+
+    </div>
+    </div>
+  </script>
+
+</div>
+
+
+
+
+
+
 <body/>
 </html>
